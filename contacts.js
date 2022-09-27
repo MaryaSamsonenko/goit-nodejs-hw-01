@@ -51,11 +51,6 @@ async function addContact(data) {
   }
 }
 
-// cosnsole.table(getAll());
-// console.log(getContactById("4"));
-// console.log(removeContact("5"));
-// console.log(addContact({ name: "Kennedy Lane" }));
-
 module.exports = {
   getAll,
   getContactById,
