@@ -29,9 +29,9 @@ async function removeContact(id) {
     if (contactToFind === -1) {
       return null;
     }
-    const updatedContacts = contacts.splice(contactToFind, 1);
-    await fs.writeFile(contactsPath, JSON.stringify(updatedContacts, null, 2));
-    return contactToFind;
+    const [updatedContacts] = contacts.splice(contactToFind, 1);
+    await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+    return updatedContacts;
   } catch (error) {
     console.error(error.massage);
   }
